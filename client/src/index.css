@@ -618,3 +618,136 @@ input,textarea,select{accent-color:var(--nv-mocha)}
 .homepage-view-all{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:46px;padding:0 25px;border:1px solid var(--nv-mocha);background:var(--nv-mocha);color:#fff;font:500 10px "Manrope",sans-serif;letter-spacing:.14em;text-transform:uppercase;transition:background .2s,color .2s,transform .2s}
 .homepage-view-all:hover{background:#583b29;border-color:#583b29;transform:translateY(-1px)}
 @media(max-width:650px){.homepage-view-all-wrap{padding:8px 16px 42px}.homepage-view-all{min-height:43px;padding:0 20px;font-size:9px}}
+
+
+/* Collection-specific shopping themes: only the Women, Men and Kids shop pages change */
+.collection-page{
+  --collection-bg:var(--nv-paper);
+  --collection-surface:#fff;
+  --collection-accent:var(--nv-mocha);
+  --collection-accent-hover:#583b29;
+  --collection-soft:var(--nv-platinum);
+  --collection-text:var(--nv-ink);
+  --collection-muted:var(--nv-muted);
+  background:var(--collection-bg)!important;
+  color:var(--collection-text);
+  padding-top:clamp(34px,5vw,64px)!important;
+}
+.collection-page .page-heading h1{color:var(--collection-accent)!important}
+.collection-page .page-heading .eyebrow{color:var(--collection-accent)!important}
+.collection-page .page-heading>p:last-child{color:var(--collection-muted)}
+.collection-page .shop-toolbar{margin-top:28px}
+.collection-page .category-pill{
+  border-color:var(--collection-accent)!important;
+  color:var(--collection-accent)!important;
+  background:var(--collection-surface)!important;
+  transition:background .2s,color .2s,border-color .2s,transform .2s;
+}
+.collection-page .category-pill:hover,
+.collection-page .category-pill.active{
+  background:var(--collection-accent)!important;
+  border-color:var(--collection-accent)!important;
+  color:#fff!important;
+}
+.collection-page .search-field{
+  border-color:color-mix(in srgb,var(--collection-accent) 32%,white)!important;
+  background:var(--collection-surface)!important;
+  color:var(--collection-accent)!important;
+}
+.collection-page .search-field:focus-within{
+  border-color:var(--collection-accent)!important;
+  box-shadow:0 0 0 3px color-mix(in srgb,var(--collection-accent) 12%,transparent);
+}
+.collection-page .search-field input{background:transparent!important;color:var(--collection-text)!important}
+.collection-page .product-image-wrap{background:var(--collection-soft)!important}
+.collection-page .product-card .product-category{color:var(--collection-muted)!important}
+.collection-page .product-card .product-name-button h3{color:var(--collection-text)!important}
+.collection-page .product-card .product-name-button:hover h3{color:var(--collection-accent)!important}
+.collection-page .product-card .product-price{color:var(--collection-accent)!important}
+.collection-page .product-card .quick-add{
+  background:var(--collection-accent)!important;
+  border-color:var(--collection-accent)!important;
+  color:#fff!important;
+}
+.collection-page .product-card .quick-add:hover{
+  background:var(--collection-accent-hover)!important;
+  border-color:var(--collection-accent-hover)!important;
+}
+.collection-page .empty-state .dark-button{
+  background:var(--collection-accent)!important;
+  border-color:var(--collection-accent)!important;
+}
+
+/* WOMEN — blush pink, rose and warm ivory */
+.collection-women{
+  --collection-bg:#fff7f8;
+  --collection-surface:#fffdfc;
+  --collection-accent:#ad5574;
+  --collection-accent-hover:#87405b;
+  --collection-soft:#f8e4eb;
+  --collection-text:#492a38;
+  --collection-muted:#8b6b78;
+}
+.collection-women .page-heading{
+  padding:clamp(22px,4vw,42px);
+  background:linear-gradient(115deg,#fce8ee 0%,#fff8f8 58%,#f5d9e3 100%);
+  border:1px solid #f0d4de;
+}
+.collection-women .page-heading h1{font-family:"Playfair Display",serif!important}
+.collection-women .category-pill.active,
+.collection-women .product-card .quick-add{box-shadow:0 5px 14px rgba(173,85,116,.12)}
+
+/* MEN — powder blue, crisp white and navy */
+.collection-men{
+  --collection-bg:#f3f8fd;
+  --collection-surface:#fff;
+  --collection-accent:#315d88;
+  --collection-accent-hover:#203f60;
+  --collection-soft:#e1edf8;
+  --collection-text:#20354d;
+  --collection-muted:#6b8095;
+}
+.collection-men .page-heading{
+  padding:clamp(22px,4vw,42px);
+  background:linear-gradient(115deg,#e1effb 0%,#f7fbff 60%,#d3e6f7 100%);
+  border:1px solid #d3e4f4;
+}
+.collection-men .page-heading h1{font-family:"Playfair Display",serif!important}
+.collection-men .category-pill.active,
+.collection-men .product-card .quick-add{box-shadow:0 5px 14px rgba(49,93,136,.12)}
+
+/* KIDS — cheerful pastel rainbow, with playful filter chips */
+.collection-kids{
+  --collection-bg:#fffdf3;
+  --collection-surface:#fff;
+  --collection-accent:#d56858;
+  --collection-accent-hover:#b94d40;
+  --collection-soft:#fff0c2;
+  --collection-text:#38324a;
+  --collection-muted:#777187;
+}
+.collection-kids .page-heading{
+  padding:clamp(22px,4vw,42px);
+  background:linear-gradient(115deg,#fff0a8 0%,#fff9e9 38%,#e2f5ff 72%,#f3e9ff 100%);
+  border:1px solid #f2e6bb;
+  border-radius:3px 28px 3px 28px;
+}
+.collection-kids .page-heading h1{font-family:"Playfair Display",serif!important;color:#484064!important}
+.collection-kids .category-pills{gap:9px}
+.collection-kids .category-pill{border-radius:22px!important}
+.collection-kids .category-pill:nth-child(1){--kid-chip:#e5dcfa}
+.collection-kids .category-pill:nth-child(2){--kid-chip:#f6dce7}
+.collection-kids .category-pill:nth-child(3){--kid-chip:#d9edff}
+.collection-kids .category-pill:nth-child(4){--kid-chip:#d8f1df}
+.collection-kids .category-pill:not(.active){background:var(--kid-chip,#fff)!important;border-color:transparent!important;color:#49435b!important}
+.collection-kids .category-pill.active{background:#d56858!important;border-color:#d56858!important;color:#fff!important}
+.collection-kids .product-card:nth-child(4n+1) .product-image-wrap{background:#fff0c2!important}
+.collection-kids .product-card:nth-child(4n+2) .product-image-wrap{background:#e2f2ff!important}
+.collection-kids .product-card:nth-child(4n+3) .product-image-wrap{background:#f5eaff!important}
+.collection-kids .product-card:nth-child(4n) .product-image-wrap{background:#e0f4e6!important}
+.collection-kids .product-card .quick-add{border-radius:20px!important}
+@media(max-width:650px){
+  .collection-page{padding-top:28px!important}
+  .collection-page .page-heading{padding:23px 18px!important}
+  .collection-page .shop-toolbar{gap:16px!important}
+}
