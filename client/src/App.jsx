@@ -9,8 +9,8 @@ const products = [
   { id: 4, name: "Weekend Classics", category: "Women", type: "BESTSELLERS", price: 1499, image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=700&q=80" },
   { id: 5, name: "Everyday Overshirt", category: "Men", type: "MEN'S EDIT", price: 1699, image: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=700&q=80" },
   { id: 6, name: "Relaxed Fit Trousers", category: "Men", type: "ESSENTIALS", price: 1399, image: "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=700&q=80" },
-  { id: 7, name: "Little Daydream Set", category: "Kids", type: "KIDS' EDIT", price: 999, image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=700&q=80" },
-  { id: 8, name: "Mini Weekend Outfit", category: "Kids", type: "NEW ARRIVALS", price: 1199, image: "https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=700&q=80" },
+  { id: 7, name: "Little Daydream Set", category: "Kids", type: "KIDS' EDIT", price: 999, image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=700&q=80" },
+  { id: 8, name: "Mini Weekend Outfit", category: "Kids", type: "NEW ARRIVALS", price: 1199, image: "https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=700&q=80" },
   { id: 9, name: "Soft Knit Cardigan", category: "Women", type: "NEW ARRIVALS", price: 1799, image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=700&q=80" },
   { id: 10, name: "Relaxed Linen Shirt", category: "Women", type: "LINEN EDIT", price: 1599, image: "https://images.unsplash.com/photo-1598554747436-c9293d6a588f?auto=format&fit=crop&w=700&q=80" },
   { id: 11, name: "Everyday Denim", category: "Women", type: "WARDROBE CLASSICS", price: 1999, image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=700&q=80" },
@@ -19,10 +19,10 @@ const products = [
   { id: 14, name: "Everyday Denim Jacket", category: "Men", type: "LAYERING EDIT", price: 2299, image: "https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=700&q=80" },
   { id: 15, name: "Minimal Polo Shirt", category: "Men", type: "WARDROBE CLASSICS", price: 999, image: "https://images.unsplash.com/photo-1627225924765-552d49cf47ad?auto=format&fit=crop&w=700&q=80" },
   { id: 16, name: "Weekend Chinos", category: "Men", type: "EVERYDAY EDIT", price: 1499, image: "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=700&q=80" },
-  { id: 17, name: "Little Cotton Co-ord", category: "Kids", type: "NEW ARRIVALS", price: 899, image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=700&q=80" },
+  { id: 17, name: "Little Cotton Co-ord", category: "Kids", type: "NEW ARRIVALS", price: 899, image: "https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=700&q=80" },
   { id: 18, name: "Mini Classic Denim", category: "Kids", type: "DENIM EDIT", price: 1099, image: "https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&w=700&q=80" },
-  { id: 19, name: "Little Weekend Layers", category: "Kids", type: "EVERYDAY EDIT", price: 999, image: "https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=700&q=80" },
-  { id: 20, name: "Playday Essentials", category: "Kids", type: "WARDROBE CLASSICS", price: 799, image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=700&q=80" },
+  { id: 19, name: "Little Weekend Layers", category: "Kids", type: "EVERYDAY EDIT", price: 999, image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=700&q=80" },
+  { id: 20, name: "Playday Essentials", category: "Kids", type: "WARDROBE CLASSICS", price: 799, image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=700&q=80" },
   { id: 21, name: "Soft Drape Blouse", category: "Women", type: "NEW ARRIVALS", price: 1499, image: "https://images.unsplash.com/photo-1551163943-3f6a855d1153?auto=format&fit=crop&w=700&q=80" },
   { id: 22, name: "Classic Midi Dress", category: "Women", type: "DRESS EDIT", price: 2199, image: "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=700&q=80" },
   { id: 23, name: "Everyday Wide-Leg Pants", category: "Women", type: "ESSENTIALS", price: 1699, image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=700&q=80" },
@@ -32,7 +32,7 @@ const products = [
   { id: 27, name: "The Weekend Sweatshirt", category: "Women", type: "CASUAL EDIT", price: 1399, image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=700&q=80" },
   { id: 28, name: "Minimal Slip Dress", category: "Women", type: "EVENING EDIT", price: 1999, image: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=700&q=80" },
   { id: 29, name: "Tailored Straight Trousers", category: "Women", type: "TAILORED EDIT", price: 1799, image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=80" },
-  { id: 30, name: "Everyday Cotton Tunic", category: "Women", type: "ESSENTIALS", price: 1299, image: "https://images.unsplash.com/photo-1583743814966-8936f37f4678?auto=format&fit=crop&w=700&q=80" },
+  { id: 30, name: "Soft Cotton Blouse", category: "Women", type: "ESSENTIALS", price: 1299, image: "https://images.unsplash.com/photo-1598554747436-c9293d6a588f?auto=format&fit=crop&w=700&q=80" },
   { id: 31, name: "Soft Ribbed Tank", category: "Women", type: "BASICS", price: 699, image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=700&q=80" },
   { id: 32, name: "Relaxed Shirt Dress", category: "Women", type: "NEW ARRIVALS", price: 1899, image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=80" },
   { id: 33, name: "Everyday Trench Coat", category: "Women", type: "OUTERWEAR", price: 2999, image: "https://images.unsplash.com/photo-1548126032-079a0fb0099d?auto=format&fit=crop&w=700&q=80" },
@@ -49,20 +49,20 @@ const products = [
   { id: 44, name: "Classic Long-Sleeve Tee", category: "Men", type: "BASICS", price: 999, image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80" },
   { id: 45, name: "Lightweight Overshirt", category: "Men", type: "LAYERING EDIT", price: 1999, image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=700&q=80" },
   { id: 46, name: "Everyday Track Pants", category: "Men", type: "ACTIVE EDIT", price: 1299, image: "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?auto=format&fit=crop&w=700&q=80" },
-  { id: 47, name: "Mini Cotton T-shirt", category: "Kids", type: "NEW ARRIVALS", price: 499, image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=700&q=80" },
-  { id: 48, name: "Little Denim Dungarees", category: "Kids", type: "DENIM EDIT", price: 999, image: "https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&w=700&q=80" },
-  { id: 49, name: "Playday Sweatshirt", category: "Kids", type: "CASUAL EDIT", price: 799, image: "https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=700&q=80" },
-  { id: 50, name: "Mini Everyday Leggings", category: "Kids", type: "ESSENTIALS", price: 599, image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=700&q=80" },
-  { id: 51, name: "Little Party Dress", category: "Kids", type: "OCCASION EDIT", price: 1299, image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=700&q=80" },
-  { id: 52, name: "Tiny Explorer Jacket", category: "Kids", type: "OUTERWEAR", price: 1399, image: "https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=700&q=80" },
-  { id: 53, name: "Mini Polo & Shorts Set", category: "Kids", type: "CO-ORD EDIT", price: 1099, image: "https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&w=700&q=80" },
-  { id: 54, name: "Little Soft Knit", category: "Kids", type: "KNITWEAR", price: 899, image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=700&q=80" },
-  { id: 55, name: "Everyday Joggers", category: "Kids", type: "EVERYDAY EDIT", price: 699, image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=700&q=80" },
-  { id: 56, name: "Mini Button-Down Shirt", category: "Kids", type: "ESSENTIALS", price: 799, image: "https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=700&q=80" },
-  { id: 57, name: "Little Summer Shorts", category: "Kids", type: "SUMMER EDIT", price: 599, image: "https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&w=700&q=80" },
-  { id: 58, name: "Mini Printed Dress", category: "Kids", type: "NEW ARRIVALS", price: 1199, image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=700&q=80" },
-  { id: 59, name: "Playtime Co-ord Set", category: "Kids", type: "CO-ORD EDIT", price: 999, image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=700&q=80" },
-  { id: 60, name: "Little Weekend Hoodie", category: "Kids", type: "CASUAL EDIT", price: 899, image: "https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=700&q=80" }
+  { id: 47, name: "Mini Cotton T-shirt", category: "Kids", type: "NEW ARRIVALS", price: 499, image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=80" },
+  { id: 48, name: "Little Denim Dungarees", category: "Kids", type: "DENIM EDIT", price: 999, image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=80" },
+  { id: 49, name: "Playday Sweatshirt", category: "Kids", type: "CASUAL EDIT", price: 799, image: "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=700&q=80" },
+  { id: 50, name: "Mini Everyday Leggings", category: "Kids", type: "ESSENTIALS", price: 599, image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=700&q=80" },
+  { id: 51, name: "Little Party Dress", category: "Kids", type: "OCCASION EDIT", price: 1299, image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=700&q=80" },
+  { id: 52, name: "Tiny Explorer Jacket", category: "Kids", type: "OUTERWEAR", price: 1399, image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=700&q=80" },
+  { id: 53, name: "Mini Polo & Shorts Set", category: "Kids", type: "CO-ORD EDIT", price: 1099, image: "https://images.unsplash.com/photo-1551163943-3f6a855d1153?auto=format&fit=crop&w=700&q=80" },
+  { id: 54, name: "Little Soft Knit", category: "Kids", type: "KNITWEAR", price: 899, image: "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=700&q=80" },
+  { id: 55, name: "Everyday Joggers", category: "Kids", type: "EVERYDAY EDIT", price: 699, image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=700&q=80" },
+  { id: 56, name: "Mini Button-Down Shirt", category: "Kids", type: "ESSENTIALS", price: 799, image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=700&q=80" },
+  { id: 57, name: "Little Summer Shorts", category: "Kids", type: "SUMMER EDIT", price: 599, image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=700&q=80" },
+  { id: 58, name: "Mini Printed Dress", category: "Kids", type: "NEW ARRIVALS", price: 1199, image: "https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=700&q=80" },
+  { id: 59, name: "Playtime Co-ord Set", category: "Kids", type: "CO-ORD EDIT", price: 999, image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=700&q=80" },
+  { id: 60, name: "Little Weekend Hoodie", category: "Kids", type: "CASUAL EDIT", price: 899, image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=700&q=80" }
 ];
 const read = (key, fallback) => { try { return JSON.parse(localStorage.getItem(key)) || fallback; } catch { return fallback; } };
 const price = (n) => "₹" + Number(n).toLocaleString("en-IN");
@@ -163,7 +163,7 @@ function App() {
     {page === "home" && <main>
       <section className="hero" id="story"><img className="hero-image" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85" alt="Contemporary fashion collection" /><div className="hero-overlay" /><div className="hero-content"><p className="eyebrow">THE NEW SEASON · 2026</p><h1>Style is<br /><em>personal.</em></h1><p className="hero-description">Thoughtful essentials. Timeless silhouettes. Made for the way you live.</p><button className="primary-button" onClick={() => go("shop", "All")}>Explore the collection <ArrowRight size={17} /></button></div><span className="hero-index">01 / THE ESSENTIALS</span></section>
       <section className="category-feature-section"><div className="section-heading"><div><p className="eyebrow">FIND YOUR FIT</p><h2>Shop by collection.</h2></div></div><div className="category-feature-grid">
-        {[{ name: "Women", label: "THE WOMEN'S EDIT", image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" }, { name: "Men", label: "THE MEN'S EDIT", image: "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=900&q=80" }, { name: "Kids", label: "LITTLE EVERYDAY ICONS", image: "https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=900&q=80" }].map((item) => <article className="category-feature" key={item.name}><img src={item.image} alt={item.name + " fashion"} loading="lazy" /><span className="category-feature-overlay" /><div className="category-feature-copy"><small>{item.label}</small><strong>{item.name}</strong><button className="category-view-products" onClick={() => { setSearch(""); go("shop", "All"); }}>View products <ArrowRight size={15} /></button></div></article>)}
+        {[{ name: "Women", label: "THE WOMEN'S EDIT", image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" }, { name: "Men", label: "THE MEN'S EDIT", image: "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=900&q=80" }, { name: "Kids", label: "LITTLE EVERYDAY ICONS", image: "https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=900&q=80" }].map((item) => <article className="category-feature" key={item.name}><img src={item.image} alt={item.name + " fashion"} loading="lazy" /><span className="category-feature-overlay" /><div className="category-feature-copy"><small>{item.label}</small><strong>{item.name}</strong><button className="category-view-products" onClick={() => { setSearch(""); go("shop", item.name); }}>View products <ArrowRight size={15} /></button></div></article>)}
       </div></section>
     </main>}
 
