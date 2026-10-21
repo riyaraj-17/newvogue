@@ -16,7 +16,7 @@ const read = (key, fallback) => { try { return JSON.parse(localStorage.getItem(k
 const price = (n) => "₹" + Number(n).toLocaleString("en-IN");
 
 function App() {
-  const [page, setPage] = useState(() => read("newvogueDemoUser", null) ? "home" : "auth");
+  const [page, setPage] = useState("auth");
   const [category, setCategory] = useState("All");
   const [cart, setCart] = useState(() => read("newvogueCart", []));
   const [user, setUser] = useState(() => read("newvogueDemoUser", null));
