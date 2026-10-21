@@ -254,3 +254,73 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px soli
  .auth-editorial-bottom{display:none}
 }
 @media(prefers-reduced-motion:reduce){.auth-card{animation:none}}
+
+
+/* Editorial fashion-store typography and more compact, Zara-inspired home layout */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
+.app{font-family:"Manrope","DM Sans",sans-serif;color:#20201e}
+.announcement{font-family:"Manrope",sans-serif;font-size:9px;letter-spacing:.13em;text-transform:uppercase}
+.navbar{min-height:74px}
+.logo{font-family:"Manrope",sans-serif;font-weight:700;letter-spacing:.2em;font-size:21px}
+.nav-links button{font-family:"Manrope",sans-serif;font-size:10px!important;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.nav-actions .icon-button{font-family:"Manrope",sans-serif;font-size:11px}
+.hero{height:min(70vh,660px);min-height:490px;max-height:660px;position:relative;overflow:hidden;background:#d7d6d1}
+.hero-image{width:100%;height:100%;object-fit:cover;object-position:center 38%;transform:scale(1.005)}
+.hero-content{max-width:470px}
+.hero-content .eyebrow,.section-heading .eyebrow,.brand-note .eyebrow,.page-heading .eyebrow{font-family:"Manrope",sans-serif;font-size:9px;letter-spacing:.2em;font-weight:600}
+.hero h1{font-family:"Playfair Display",serif;font-weight:400;letter-spacing:-.055em;line-height:.98;font-size:clamp(54px,6vw,82px)}
+.hero-description{font-family:"Manrope",sans-serif;font-size:12px;line-height:1.9;max-width:330px}
+.primary-button,.quick-add,.text-link,.category-pill{font-family:"Manrope",sans-serif;letter-spacing:.1em;text-transform:uppercase;font-size:10px}
+.section-heading h2,.brand-note h2{font-family:"Playfair Display",serif;font-weight:400;letter-spacing:-.045em}
+.section-heading h2{font-size:clamp(30px,3vw,42px)}
+.category-feature-section{padding:52px 5% 14px}
+.category-feature-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.category-feature{aspect-ratio:3/4;max-height:440px}
+.category-feature-copy{left:20px;bottom:20px}
+.category-feature-copy strong{font-family:"Playfair Display",serif;font-size:30px;font-weight:400}
+.shop-section{padding:48px 5% 62px}
+.product-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.product-card{min-width:0}
+.product-card img,.product-image{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;display:block}
+.product-card h3{font-family:"Manrope",sans-serif;font-size:12px;font-weight:500;letter-spacing:.005em}
+.product-card .product-meta,.product-category{font-family:"Manrope",sans-serif;font-size:9px;letter-spacing:.13em}
+.product-price{font-family:"Manrope",sans-serif;font-size:12px}
+.brand-note{padding:74px 20px 82px;text-align:center;background:#f0efeb}
+.brand-note h2{font-size:clamp(32px,4vw,48px)}
+.brand-note>p:last-child{font-family:"Manrope",sans-serif;color:#77766f;font-size:12px;line-height:1.8}
+.footer{font-family:"Manrope",sans-serif}
+.auth-shell{height:100svh;min-height:620px;max-height:100svh;position:relative;display:block;overflow:hidden;padding:0;background:#171717}
+.auth-editorial{position:absolute;inset:0;width:100%;height:100%;min-height:100%;padding:clamp(26px,4vw,60px);background-size:cover;background-position:center 34%;background-image:linear-gradient(90deg,rgba(0,0,0,.30) 0%,rgba(0,0,0,.08) 42%,rgba(0,0,0,.35) 100%),linear-gradient(0deg,rgba(0,0,0,.46),transparent 34%,rgba(0,0,0,.24)),url("https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=2200&q=90")}
+.auth-editorial-copy{left:clamp(28px,6vw,88px);bottom:clamp(46px,8vh,100px);max-width:400px}
+.auth-editorial-copy h2{font-size:clamp(54px,6vw,86px)}
+.auth-panel{position:absolute;inset:0;min-height:100%;height:100%;display:flex;justify-content:center;align-items:center;padding:30px 30px 30px 44%;background:transparent;pointer-events:none}
+.auth-card{width:min(100%,430px);padding:clamp(30px,3.5vw,46px);background:rgba(250,250,248,.96);border:1px solid rgba(255,255,255,.86);box-shadow:0 30px 100px rgba(0,0,0,.32),0 2px 12px rgba(0,0,0,.08);backdrop-filter:blur(18px)}
+.auth-card h1{font-family:"Playfair Display",serif}
+@media(max-width:900px){
+ .hero{height:62vh;min-height:450px}
+ .category-feature{max-height:360px}
+ .auth-panel{padding:24px 24px 24px 38%}
+ .auth-card{width:min(100%,400px)}
+}
+@media(max-width:650px){
+ .navbar{min-height:66px}
+ .hero{height:66vh;min-height:440px}
+ .hero h1{font-size:clamp(48px,12vw,68px)}
+ .category-feature-section{padding:40px 5% 8px}
+ .category-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .category-feature{aspect-ratio:3/4;max-height:none}
+ .category-feature:last-child{grid-column:1/-1;aspect-ratio:16/8}
+ .category-feature-copy{left:14px;bottom:14px}
+ .category-feature-copy strong{font-size:25px}
+ .shop-section{padding:40px 5% 48px}
+ .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 10px}
+ .product-card img,.product-image{aspect-ratio:3/4}
+ .auth-shell{height:auto;min-height:100svh;max-height:none;overflow:auto}
+ .auth-editorial{position:fixed;inset:0;background-position:56% center}
+ .auth-editorial-copy{left:22px;bottom:22px;max-width:230px;opacity:.82}
+ .auth-editorial-copy h2{font-size:42px;margin-bottom:9px}
+ .auth-editorial-copy>p:last-child{display:none}
+ .auth-panel{position:relative;min-height:100svh;height:auto;padding:54px 18px;justify-content:center}
+ .auth-card{width:100%;max-width:410px;padding:30px 24px;background:rgba(250,250,248,.97)}
+ .auth-card h1{font-size:34px}
+}
