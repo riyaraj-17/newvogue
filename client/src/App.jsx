@@ -96,7 +96,7 @@ function App() {
       </div>
     </header>
     </>}
-    {notice && <div className="notice-bar" role="status">{notice}<button aria-label="Dismiss" onClick={() => setNotice("")}><X size={14} /></button></div>}
+    {notice && page !== "auth" && <div className="notice-bar" role="status">{notice}<button aria-label="Dismiss" onClick={() => setNotice("")}><X size={14} /></button></div>}
 
     {page === "home" && <main>
       <section className="hero" id="story"><img className="hero-image" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85" alt="Contemporary fashion collection" /><div className="hero-overlay" /><div className="hero-content"><p className="eyebrow">THE NEW SEASON · 2026</p><h1>Less, but<br />better.</h1><p className="hero-description">Thoughtful essentials. Timeless silhouettes. Made for the way you live.</p><button className="primary-button" onClick={() => go("shop", "All")}>Explore the collection <ArrowRight size={17} /></button></div><span className="hero-index">01 / THE ESSENTIALS</span></section>
