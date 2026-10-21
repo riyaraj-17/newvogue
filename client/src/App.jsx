@@ -92,7 +92,6 @@ function App() {
       <div className="nav-actions">
         <button className="icon-button" aria-label="Search products" onClick={() => go("shop", category)}><Search size={20} /></button>
         <button className="icon-button" aria-label="Shopping bag" onClick={() => go("cart")}><ShoppingBag size={20} /><span>{count}</span></button>
-        <button className="icon-button" aria-label="My account" onClick={() => user ? go("account") : (setAuthMode("login"), go("auth"))}><UserRound size={20} /></button>
       </div>
     </header>
     {notice && <div className="notice-bar" role="status">{notice}<button aria-label="Dismiss" onClick={() => setNotice("")}><X size={14} /></button></div>}
