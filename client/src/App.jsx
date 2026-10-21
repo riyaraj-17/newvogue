@@ -8,7 +8,7 @@ const products = [
   { id: 3, name: "Modern Tailored Look", category: "Women", type: "COLLECTION", price: 1899, image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=80" },
   { id: 4, name: "Weekend Classics", category: "Women", type: "BESTSELLERS", price: 1499, image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=700&q=80" },
   { id: 5, name: "Everyday Overshirt", category: "Men", type: "MEN'S EDIT", price: 1699, image: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=700&q=80" },
-  { id: 6, name: "Relaxed Fit Trousers", category: "Men", type: "ESSENTIALS", price: 1399, image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=80" },
+  { id: 6, name: "Relaxed Fit Trousers", category: "Men", type: "ESSENTIALS", price: 1399, image: "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=700&q=80" },
   { id: 7, name: "Little Daydream Set", category: "Kids", type: "KIDS' EDIT", price: 999, image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=700&q=80" },
   { id: 8, name: "Mini Weekend Outfit", category: "Kids", type: "NEW ARRIVALS", price: 1199, image: "https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=700&q=80" }
 ];
@@ -16,7 +16,7 @@ const read = (key, fallback) => { try { return JSON.parse(localStorage.getItem(k
 const price = (n) => "₹" + Number(n).toLocaleString("en-IN");
 
 function App() {
-  const [page, setPage] = useState("home");
+  const [page, setPage] = useState(() => read("newvogueDemoUser", null) ? "home" : "auth");
   const [category, setCategory] = useState("All");
   const [cart, setCart] = useState(() => read("newvogueCart", []));
   const [user, setUser] = useState(() => read("newvogueDemoUser", null));
@@ -56,12 +56,12 @@ function App() {
       setUsers((old) => [...old, { ...nextUser, password }]);
       setUser(nextUser);
       setNotifications((old) => [{ id: Date.now(), title: "Welcome to NewVogue", body: "Your account is ready. Discover your next favourite.", date: new Date().toISOString(), read: false }, ...old]);
-      go("account"); setNotice("Welcome to NewVogue!");
+      go("home"); setNotice("Welcome to NewVogue!");
     } else {
       const found = users.find((u) => u.email === email && u.password === password);
       if (!found) { setNotice("Demo account not found. Please sign up first."); return; }
       setUser({ name: found.name, email: found.email, phone: found.phone || "", address: found.address || "" });
-      go("account"); setNotice("You're signed in.");
+      go("home"); setNotice("You're signed in.");
     }
   };
   const saveProfile = (event) => {
@@ -78,7 +78,7 @@ function App() {
     setNotifications((old) => [{ id: Date.now(), title: "Order confirmed", body: "Your order " + order.id + " has been placed.", date: new Date().toISOString(), read: false }, ...old]);
     setCart([]); go("orders"); setNotice("Your demo order " + order.id + " has been placed.");
   };
-  const logout = () => { setUser(null); setEditing(false); go("home"); setNotice("You have been logged out."); };
+  const logout = () => { setUser(null); setEditing(false); setAuthMode("login"); go("auth"); setNotice("You have been logged out."); };
 
   return <div className="app">
     <div className="announcement">Complimentary shipping on orders over ₹2,499</div>
@@ -100,7 +100,7 @@ function App() {
     {page === "home" && <main>
       <section className="hero" id="story"><img className="hero-image" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85" alt="Contemporary fashion collection" /><div className="hero-overlay" /><div className="hero-content"><p className="eyebrow">THE NEW SEASON · 2026</p><h1>Less, but<br />better.</h1><p className="hero-description">Thoughtful essentials. Timeless silhouettes. Made for the way you live.</p><button className="primary-button" onClick={() => go("shop", "All")}>Explore the collection <ArrowRight size={17} /></button></div><span className="hero-index">01 / THE ESSENTIALS</span></section>
       <section className="category-feature-section"><div className="section-heading"><div><p className="eyebrow">FIND YOUR FIT</p><h2>Shop by collection.</h2></div></div><div className="category-feature-grid">
-        {[{ name: "Women", label: "THE WOMEN'S EDIT", image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" }, { name: "Men", label: "THE MEN'S EDIT", image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" }, { name: "Kids", label: "LITTLE EVERYDAY ICONS", image: "https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=900&q=80" }].map((item) => <button className="category-feature" key={item.name} onClick={() => go("shop", item.name)}><img src={item.image} alt={item.name + " fashion"} loading="lazy" /><span className="category-feature-overlay" /><span className="category-feature-copy"><small>{item.label}</small><strong>{item.name}</strong><span>Explore collection <ArrowRight size={16} /></span></span></button>)}
+        {[{ name: "Women", label: "THE WOMEN'S EDIT", image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" }, { name: "Men", label: "THE MEN'S EDIT", image: "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=900&q=80" }, { name: "Kids", label: "LITTLE EVERYDAY ICONS", image: "https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=900&q=80" }].map((item) => <button className="category-feature" key={item.name} onClick={() => go("shop", item.name)}><img src={item.image} alt={item.name + " fashion"} loading="lazy" /><span className="category-feature-overlay" /><span className="category-feature-copy"><small>{item.label}</small><strong>{item.name}</strong><span>Explore collection <ArrowRight size={16} /></span></span></button>)}
       </div></section>
       <section className="shop-section"><div className="section-heading"><div><p className="eyebrow">CURATED FOR YOU</p><h2>Everyday icons.</h2></div><button className="text-link" onClick={() => go("shop", "All")}>View all products <ArrowRight size={16} /></button></div><div className="product-grid">{products.slice(0, 4).map((p) => <ProductCard key={p.id} product={p} add={add} open={() => { setSelectedId(p.id); go("product"); }} />)}</div></section>
       <section className="brand-note"><p className="eyebrow">OUR PHILOSOPHY</p><h2>Style that feels like you.</h2><p>Considered design, versatile pieces, and fewer things chosen better.</p></section>
