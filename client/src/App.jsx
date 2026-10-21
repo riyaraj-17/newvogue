@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, Bell, LogIn, LogOut, Menu, Package, Search, ShoppingBag, UserRound, X } from "lucide-react";
+import { ArrowRight, Bell, LogIn, LogOut, Menu, Package, Search, ShoppingBag, Store, UserRound, X } from "lucide-react";
 import "./index.css";
 
 const products = [
@@ -84,16 +84,25 @@ function App() {
     {page !== "auth" && <>
     <div className="announcement">Complimentary shipping on orders over ₹2,499</div>
     <header className="navbar">
-      <button className="icon-button mobile-menu" aria-label="Toggle menu" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X size={21} /> : <Menu size={21} />}</button>
-      <button className="logo logo-button" onClick={() => go("home")}>NEWVOGUE<span>.</span></button>
-      <nav className={"nav-links " + (menuOpen ? "nav-links-open" : "")}>
-        {["Women", "Men", "Kids"].map((item) => <button key={item} className={category === item ? "nav-active" : ""} onClick={() => go("shop", item)}>{item}</button>)}
-        <button onClick={() => go("shop", "All")}>Shop all</button>
-      </nav>
-      <div className="nav-actions">
-        <button className="icon-button" aria-label="Search products" onClick={() => go("shop", category)}><Search size={20} /></button>
-        <button className="icon-button" aria-label="Shopping bag" onClick={() => go("cart")}><ShoppingBag size={20} /><span>{count}</span></button>
+      <div className="nav-start">
+        <button className="icon-button menu-trigger" aria-label="Open navigation menu" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X size={21} strokeWidth={1.6} /> : <Menu size={22} strokeWidth={1.6} />}</button>
       </div>
+      <button className="logo logo-button centered-logo" onClick={() => go("home")}>NEWVOGUE<span>.</span></button>
+      <div className="nav-actions">
+        <button className="icon-button nav-shop-button" aria-label="Shop all products" title="Shop all" onClick={() => go("shop", "All")}><Store size={19} strokeWidth={1.6} /><span className="nav-action-label">Shop</span></button>
+        <button className="icon-button nav-cart-button" aria-label="Shopping bag" title="Shopping bag" onClick={() => go("cart")}><ShoppingBag size={19} strokeWidth={1.6} /><span className="cart-count">{count}</span></button>
+        <button className="logout-button" onClick={logout}><LogOut size={15} strokeWidth={1.7} /><span>Log out</span></button>
+      </div>
+      {menuOpen && <nav className="nav-drawer" aria-label="Main navigation">
+        <p className="nav-drawer-kicker">DISCOVER NEWVOGUE</p>
+        {["Women", "Men", "Kids"].map((item) => <button key={item} className="nav-drawer-link" onClick={() => go("shop", item)}>{item}<ArrowRight size={15} /></button>)}
+        <button className="nav-drawer-link" onClick={() => go("shop", "All")}>Shop all products<ArrowRight size={15} /></button>
+        <div className="nav-drawer-divider" />
+        <button className="nav-drawer-link" onClick={() => go("account")}>My account<UserRound size={15} /></button>
+        <button className="nav-drawer-link" onClick={() => go("orders")}>Order history<Package size={15} /></button>
+        <button className="nav-drawer-link" onClick={() => go("notifications")}>Notifications<Bell size={15} /></button>
+        <button className="nav-drawer-logout" onClick={logout}><LogOut size={15} />Log out</button>
+      </nav>}
     </header>
     </>}
     {notice && page !== "auth" && <div className="notice-bar" role="status">{notice}<button aria-label="Dismiss" onClick={() => setNotice("")}><X size={14} /></button></div>}
