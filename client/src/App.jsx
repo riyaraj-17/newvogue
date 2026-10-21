@@ -32,7 +32,7 @@ const products = [
   { id: 27, name: "The Weekend Sweatshirt", category: "Women", type: "CASUAL EDIT", price: 1399, image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=700&q=80" },
   { id: 28, name: "Minimal Slip Dress", category: "Women", type: "EVENING EDIT", price: 1999, image: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=700&q=80" },
   { id: 29, name: "Tailored Straight Trousers", category: "Women", type: "TAILORED EDIT", price: 1799, image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=80" },
-  { id: 30, name: "Soft Cotton Blouse", category: "Women", type: "ESSENTIALS", price: 1299, image: "https://images.unsplash.com/photo-1598554747436-c9293d6a588f?auto=format&fit=crop&w=700&q=80" },
+  { id: 30, name: "Soft Cotton Blouse", category: "Women", type: "ESSENTIALS", price: 1299, image: "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?auto=format&fit=crop&w=700&q=80" },
   { id: 31, name: "Soft Ribbed Tank", category: "Women", type: "BASICS", price: 699, image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=700&q=80" },
   { id: 32, name: "Relaxed Shirt Dress", category: "Women", type: "NEW ARRIVALS", price: 1899, image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=80" },
   { id: 33, name: "Everyday Trench Coat", category: "Women", type: "OUTERWEAR", price: 2999, image: "https://images.unsplash.com/photo-1548126032-079a0fb0099d?auto=format&fit=crop&w=700&q=80" },
