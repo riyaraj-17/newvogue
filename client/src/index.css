@@ -39,3 +39,89 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px soli
 .account-form input:focus,.account-form textarea:focus{border-color:#a16d48;box-shadow:0 0 0 3px rgba(161,109,72,.1);outline:none}
 .footer{border-top:1px solid #e4e0d7}
 @media(max-width:650px){.primary-button{min-height:46px;padding:13px 16px;font-size:10px}.auth-card{box-shadow:0 12px 38px rgba(35,32,26,.07)}}
+
+
+/* NewVogue signature entrance — deep plum, espresso and champagne */
+.auth-shell{
+  min-height:calc(100vh - 118px);
+  padding:clamp(42px,7vw,92px) 22px;
+  display:grid;
+  place-items:center;
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at 14% 18%,rgba(172,112,98,.35),transparent 34%),
+    radial-gradient(ellipse at 88% 78%,rgba(190,151,99,.22),transparent 31%),
+    linear-gradient(135deg,#170f19 0%,#291722 42%,#43252b 72%,#171015 100%);
+}
+.auth-shell:before{
+  content:"";
+  position:absolute;z-index:-1;
+  width:min(76vw,850px);aspect-ratio:1;
+  border:1px solid rgba(226,190,142,.22);border-radius:50%;
+  right:-22%;top:-57%;
+  box-shadow:0 0 0 36px rgba(226,190,142,.025),0 0 0 78px rgba(226,190,142,.02),0 0 120px rgba(206,151,111,.08);
+  animation:nv-orbit 22s linear infinite;
+}
+.auth-shell:after{
+  content:"NEWVOGUE  /  EST. 2026";
+  position:absolute;z-index:-1;
+  left:clamp(18px,5vw,72px);bottom:clamp(18px,4vw,48px);
+  color:rgba(244,224,194,.5);font-size:9px;letter-spacing:.28em;
+}
+.auth-card{
+  width:min(100%,480px);
+  position:relative;z-index:1;
+  padding:clamp(30px,5vw,52px);
+  color:#f8f0e7;
+  background:linear-gradient(145deg,rgba(44,29,39,.94),rgba(27,19,27,.97));
+  border:1px solid rgba(222,184,135,.42);
+  box-shadow:0 35px 100px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.07);
+  backdrop-filter:blur(18px);
+  animation:nv-rise .8s cubic-bezier(.2,.75,.25,1) both;
+}
+.auth-card:before{
+  content:"";position:absolute;inset:9px;pointer-events:none;
+  border:1px solid rgba(222,184,135,.12);
+}
+.auth-card>.eyebrow{position:relative;color:#d9b784;font-size:9px;letter-spacing:.24em;margin:0 0 19px}
+.auth-card h1{position:relative;color:#fff5e9;font-family:"Playfair Display",serif;font-weight:400;font-size:clamp(39px,5vw,51px);line-height:1.08;letter-spacing:-1.5px;margin:0 0 14px}
+.auth-subtitle{position:relative;color:#c5b5b6;font-size:12px;line-height:1.9;margin:0 0 30px}
+.auth-card .account-form{position:relative;gap:18px}
+.auth-card .account-form label{color:#e8d9cf;font-size:10px;letter-spacing:.08em;text-transform:uppercase;gap:9px}
+.auth-card .account-form input,.auth-card .account-form textarea{
+  border:1px solid rgba(220,195,174,.24);
+  background:rgba(255,249,242,.055);
+  color:#fff7ee;padding:15px 14px;border-radius:0;
+  font-size:13px;letter-spacing:0;
+  transition:border-color .25s,background .25s,box-shadow .25s;
+}
+.auth-card .account-form input::placeholder{color:#a9959c}
+.auth-card .account-form input:focus,.auth-card .account-form textarea:focus{
+  border-color:#d7b47c;background:rgba(255,249,242,.09);
+  box-shadow:0 0 0 3px rgba(215,180,124,.1);outline:none;
+}
+.auth-card .primary-button{
+  min-height:53px;margin-top:5px;width:100%;
+  justify-content:center;gap:13px;
+  color:#24151b;background:linear-gradient(105deg,#d7b47c,#f0d8b0 48%,#c49b66);
+  border:1px solid #e3c797;border-radius:0;
+  font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  box-shadow:0 10px 30px rgba(0,0,0,.18);
+  transition:transform .25s,filter .25s,box-shadow .25s;
+}
+.auth-card .primary-button:hover{color:#21141a;filter:brightness(1.08);transform:translateY(-2px);box-shadow:0 14px 34px rgba(0,0,0,.3)}
+.auth-switch{position:relative;color:#c8b6b8;font-size:11px;margin-top:26px}
+.auth-switch button{color:#e4c18d;padding:4px 6px;text-underline-offset:4px}
+.auth-switch button:hover{color:#fff0d6}
+.auth-card .demo-warning{position:relative;color:#8f7c83;font-size:9px}
+@keyframes nv-rise{from{opacity:0;transform:translateY(18px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes nv-orbit{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@media(max-width:650px){
+ .auth-shell{min-height:calc(100vh - 90px);padding:32px 15px 64px}
+ .auth-card{padding:34px 24px}
+ .auth-card h1{font-size:40px}
+ .auth-shell:after{font-size:8px;bottom:16px;left:20px}
+}
+@media(prefers-reduced-motion:reduce){.auth-card,.auth-shell:before{animation:none}}
