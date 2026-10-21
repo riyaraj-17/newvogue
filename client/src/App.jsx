@@ -22,7 +22,7 @@ const products = [
   { id: 17, name: "Little Cotton Co-ord", category: "Kids", type: "NEW ARRIVALS", price: 899, image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=700&q=80" },
   { id: 18, name: "Mini Classic Denim", category: "Kids", type: "DENIM EDIT", price: 1099, image: "https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&w=700&q=80" },
   { id: 19, name: "Little Weekend Layers", category: "Kids", type: "EVERYDAY EDIT", price: 999, image: "https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=700&q=80" },
-  { id: 20, name: "Playday Essentials", category: "Kids", type: "WARDROBE CLASSICS", price: 799, image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=700&q=80" }
+  { id: 20, name: "Playday Essentials", category: "Kids", type: "WARDROBE CLASSICS", price: 799, image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=700&q=80" },
   { id: 21, name: "Soft Drape Blouse", category: "Women", type: "NEW ARRIVALS", price: 1499, image: "https://images.unsplash.com/photo-1551163943-3f6a855d1153?auto=format&fit=crop&w=700&q=80" },
   { id: 22, name: "Classic Midi Dress", category: "Women", type: "DRESS EDIT", price: 2199, image: "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=700&q=80" },
   { id: 23, name: "Everyday Wide-Leg Pants", category: "Women", type: "ESSENTIALS", price: 1699, image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=700&q=80" },
