@@ -10,7 +10,19 @@ const products = [
   { id: 5, name: "Everyday Overshirt", category: "Men", type: "MEN'S EDIT", price: 1699, image: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=700&q=80" },
   { id: 6, name: "Relaxed Fit Trousers", category: "Men", type: "ESSENTIALS", price: 1399, image: "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=700&q=80" },
   { id: 7, name: "Little Daydream Set", category: "Kids", type: "KIDS' EDIT", price: 999, image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=700&q=80" },
-  { id: 8, name: "Mini Weekend Outfit", category: "Kids", type: "NEW ARRIVALS", price: 1199, image: "https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=700&q=80" }
+  { id: 8, name: "Mini Weekend Outfit", category: "Kids", type: "NEW ARRIVALS", price: 1199, image: "https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=700&q=80" },
+  { id: 9, name: "Soft Knit Cardigan", category: "Women", type: "NEW ARRIVALS", price: 1799, image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=700&q=80" },
+  { id: 10, name: "Relaxed Linen Shirt", category: "Women", type: "LINEN EDIT", price: 1599, image: "https://images.unsplash.com/photo-1598554747436-c9293d6a588f?auto=format&fit=crop&w=700&q=80" },
+  { id: 11, name: "Everyday Denim", category: "Women", type: "WARDROBE CLASSICS", price: 1999, image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=700&q=80" },
+  { id: 12, name: "Classic Blazer", category: "Women", type: "TAILORED EDIT", price: 2499, image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=700&q=80" },
+  { id: 13, name: "Essential Crewneck", category: "Men", type: "NEW ARRIVALS", price: 1099, image: "https://images.unsplash.com/photo-1578681994506-b8f463449011?auto=format&fit=crop&w=700&q=80" },
+  { id: 14, name: "Everyday Denim Jacket", category: "Men", type: "LAYERING EDIT", price: 2299, image: "https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=700&q=80" },
+  { id: 15, name: "Minimal Polo Shirt", category: "Men", type: "WARDROBE CLASSICS", price: 999, image: "https://images.unsplash.com/photo-1627225924765-552d49cf47ad?auto=format&fit=crop&w=700&q=80" },
+  { id: 16, name: "Weekend Chinos", category: "Men", type: "EVERYDAY EDIT", price: 1499, image: "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=700&q=80" },
+  { id: 17, name: "Little Cotton Co-ord", category: "Kids", type: "NEW ARRIVALS", price: 899, image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=700&q=80" },
+  { id: 18, name: "Mini Classic Denim", category: "Kids", type: "DENIM EDIT", price: 1099, image: "https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&w=700&q=80" },
+  { id: 19, name: "Little Weekend Layers", category: "Kids", type: "EVERYDAY EDIT", price: 999, image: "https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=700&q=80" },
+  { id: 20, name: "Playday Essentials", category: "Kids", type: "WARDROBE CLASSICS", price: 799, image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=700&q=80" }
 ];
 const read = (key, fallback) => { try { return JSON.parse(localStorage.getItem(key)) || fallback; } catch { return fallback; } };
 const price = (n) => "₹" + Number(n).toLocaleString("en-IN");
@@ -153,7 +165,7 @@ function App() {
 
     {page === "notifications" && <main className="page-shell"><div className="page-heading"><p className="eyebrow">STAY IN THE LOOP</p><h1>Notifications</h1><p>Order confirmations and account updates.</p></div>{!user ? <AuthPrompt go={() => { setAuthMode("login"); go("auth"); }} /> : !notifications.length ? <div className="empty-state"><Bell size={35} /><h2>You're all caught up.</h2><p>Your updates will appear here.</p></div> : <div className="notification-list">{notifications.map((n) => <article className={"notification-item " + (!n.read ? "notification-unread" : "")} key={n.id}><Bell size={20} /><div><h3>{n.title}</h3><p>{n.body}</p><small>{new Date(n.date).toLocaleString("en-IN")}</small></div></article>)}<button className="outline-button" onClick={() => setNotifications((old) => old.map((n) => ({ ...n, read: true })))}>Mark all as read</button></div>}</main>}
 
-    {page !== "auth" && <footer className="footer"><button className="logo footer-logo logo-button" onClick={() => go("home")}>NEWVOGUE<span>.</span></button><p>Modern fashion. Your style.</p><div className="footer-links"><button onClick={() => go("shop", "Women")}>Women</button><button onClick={() => go("shop", "Men")}>Men</button><button onClick={() => go("shop", "Kids")}>Kids</button><button onClick={() => user ? go("account") : (setAuthMode("login"), go("auth"))}>My account</button></div><p>© 2026 NewVogue. Portfolio project.</p></footer>}
+    {page !== "auth" && <footer className="footer footer-centered"><button className="logo footer-logo logo-button" onClick={() => go("home")}>NEWVOGUE<span>.</span></button><p className="footer-tagline">Modern fashion. Your style.</p><div className="footer-links"><button onClick={() => go("shop", "Women")}>Women</button><button onClick={() => go("shop", "Men")}>Men</button><button onClick={() => go("shop", "Kids")}>Kids</button><button onClick={() => user ? go("account") : (setAuthMode("login"), go("auth"))}>My account</button></div><p className="footer-copyright">© 2026 NewVogue. Portfolio project.</p></footer>}
   </div>;
 }
 
