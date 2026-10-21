@@ -81,6 +81,7 @@ function App() {
   const logout = () => { setUser(null); setEditing(false); setAuthMode("login"); go("auth"); setNotice("You have been logged out."); };
 
   return <div className="app">
+    {page !== "auth" && <>
     <div className="announcement">Complimentary shipping on orders over ₹2,499</div>
     <header className="navbar">
       <button className="icon-button mobile-menu" aria-label="Toggle menu" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X size={21} /> : <Menu size={21} />}</button>
@@ -94,6 +95,7 @@ function App() {
         <button className="icon-button" aria-label="Shopping bag" onClick={() => go("cart")}><ShoppingBag size={20} /><span>{count}</span></button>
       </div>
     </header>
+    </>}
     {notice && <div className="notice-bar" role="status">{notice}<button aria-label="Dismiss" onClick={() => setNotice("")}><X size={14} /></button></div>}
 
     {page === "home" && <main>
