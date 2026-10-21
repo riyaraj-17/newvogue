@@ -448,3 +448,8 @@ input,textarea,select{accent-color:var(--nv-mocha)}
  .shop-section .text-link{margin:0;padding:0 10px;min-height:38px;font-size:8px;gap:5px}
 }
 @media(max-width:370px){.centered-logo{font-size:13px;letter-spacing:.12em!important}.nav-actions .icon-button{min-width:30px}.navbar{padding:0 9px!important}}
+
+/* Center the sign-in card over the full-bleed editorial image */
+.auth-panel{padding:30px!important;justify-content:center!important;align-items:center!important}
+.auth-card{margin:0 auto;pointer-events:auto}
+@media(max-width:650px){.auth-panel{padding:40px 16px!important}}
