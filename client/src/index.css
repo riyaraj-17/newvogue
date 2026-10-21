@@ -560,3 +560,15 @@ input,textarea,select{accent-color:var(--nv-mocha)}
   .size-option{min-height:42px}
 }
 @media(prefers-reduced-motion:reduce){.announcement-track{animation:none!important}}
+
+/* Show the complete garment on the product detail screen too */
+.product-detail-layout>img{
+  object-fit:contain!important;
+  object-position:center center!important;
+  background:var(--nv-platinum)!important;
+  padding:12px!important;
+  box-sizing:border-box!important;
+}
+@media(max-width:650px){
+  .product-detail-layout>img{max-height:430px!important;aspect-ratio:3/4!important;padding:8px!important}
+}
