@@ -484,3 +484,79 @@ input,textarea,select{accent-color:var(--nv-mocha)}
  .product-card .product-category{font-size:7px!important}
  .product-name-button h3,.product-card h3,.product-price{font-size:10px!important}
 }
+
+
+/* NEWVOGUE refinement: moving shipping strip, full-look product imagery, sizes */
+.announcement{
+  height:30px!important;
+  display:block!important;
+  overflow:hidden!important;
+  white-space:nowrap!important;
+  padding:0!important;
+  line-height:30px!important;
+  font-size:9px!important;
+  letter-spacing:.14em!important;
+  text-align:left!important;
+}
+.announcement-track{
+  display:flex!important;
+  width:max-content!important;
+  min-width:max-content!important;
+  height:30px!important;
+  align-items:center!important;
+  animation:nv-marquee-left 32s linear infinite;
+  will-change:transform;
+}
+.announcement-track span{
+  display:inline-flex!important;
+  align-items:center!important;
+  flex:0 0 auto!important;
+  gap:28px!important;
+  padding-right:28px!important;
+}
+.announcement-track i{font-style:normal;color:var(--nv-lilac);font-size:10px}
+.announcement:hover .announcement-track{animation-play-state:paused}
+@keyframes nv-marquee-left{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.hero-content{top:clamp(42px,8vh,88px)!important;bottom:auto!important}
+.hero h1 em{font-weight:400;color:var(--nv-lilac)}
+/* Three smaller product columns with the whole garment kept in frame */
+.product-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:28px 18px!important}
+.product-card img,.product-image{
+  width:100%!important;
+  height:clamp(210px,29vw,390px)!important;
+  max-height:390px!important;
+  aspect-ratio:3/4!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  padding:10px!important;
+  box-sizing:border-box!important;
+  background:var(--nv-platinum)!important;
+}
+.product-image-wrap{background:var(--nv-platinum)!important}
+.product-open{height:auto!important;min-height:0!important}
+.product-card .quick-add{display:flex;align-items:center;justify-content:center;width:100%;min-height:34px;margin-top:7px;position:static!important;opacity:1!important;transform:none!important;background:var(--nv-mocha)!important;color:#fff!important;border:1px solid var(--nv-mocha)!important}
+.product-card .quick-add:hover{background:#583b29!important}
+.size-picker{margin:24px 0 20px}
+.size-picker-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:11px;color:var(--nv-ink);font-size:11px;letter-spacing:.06em}
+.size-picker-heading span:last-child{color:var(--nv-muted);font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+.size-options{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.size-option{min-height:43px;border:1px solid #cfc5bd;background:transparent;color:var(--nv-ink);font:500 11px "Manrope",sans-serif;transition:background .18s,color .18s,border-color .18s}
+.size-option:hover{border-color:var(--nv-mocha);background:var(--nv-lilac)}
+.size-option.selected{background:var(--nv-mocha);border-color:var(--nv-mocha);color:#fff}
+.cart-item-size{font-size:11px!important;color:var(--nv-muted)!important;margin:5px 0 9px!important}
+@media(min-width:651px) and (max-width:1050px){
+  .product-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:24px 13px!important}
+  .product-card img,.product-image{height:clamp(210px,31vw,330px)!important;padding:8px!important}
+}
+@media(max-width:650px){
+  .announcement{height:28px!important;line-height:28px!important;font-size:8px!important}
+  .announcement-track{height:28px!important;animation-duration:25s}
+  .announcement-track span{gap:18px!important;padding-right:18px!important}
+  .hero-content{top:38px!important;bottom:auto!important}
+  .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:22px 11px!important}
+  .product-card img,.product-image{height:clamp(190px,61vw,310px)!important;max-height:none!important;padding:7px!important}
+  .product-card .quick-add{min-height:32px;font-size:8px!important;letter-spacing:.08em!important}
+  .size-options{gap:6px}
+  .size-option{min-height:42px}
+}
+@media(prefers-reduced-motion:reduce){.announcement-track{animation:none!important}}
